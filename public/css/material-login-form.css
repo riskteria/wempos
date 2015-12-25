@@ -1,0 +1,293 @@
+* { box-sizing:border-box; }
+
+body {
+   font-family: Helvetica;
+   background: #eee;
+  -webkit-font-smoothing: antialiased;
+}
+
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label {
+  position: relative;
+  padding:0 1.5rem;
+  cursor: pointer;
+  margin-left: 0;
+}
+
+/* checkbox aspect */
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left:0; top: 2px;
+  width: 1rem;
+  height: 1rem;
+  border: none;
+  background: #eee;
+  border-radius: 0.2rem;
+  box-shadow: none;
+  outline: none;
+}
+/* checked mark aspect */
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+  content: '✔';
+  position: absolute;
+  top: 3px; left: 4px;
+  font-size: 18px;
+  line-height: 0.8;
+  color: #09ad7e;
+  transition: all .4s;
+}
+/* checked mark aspect changes */
+
+[type="checkbox"]:checked + label {
+   color: #00bcd4;
+}
+
+[type="checkbox"]:checked + label:before {
+   background: none;
+}
+
+[type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+[type="checkbox"]:checked + label:after {
+  opacity: 1;
+  transform: scale(1);
+}
+/* disabled checkbox */
+[type="checkbox"]:disabled:not(:checked) + label:before,
+[type="checkbox"]:disabled:checked + label:before {
+  box-shadow: none;
+  background-color: #ddd;
+}
+[type="checkbox"]:disabled:checked + label:after {
+  color: #00bcd4;
+}
+[type="checkbox"]:disabled + label {
+  color: #aaa;
+}
+/* accessibility */
+[type="checkbox"]:checked:focus + label:before,
+[type="checkbox"]:not(:checked):focus + label:before {
+  border: none;
+}
+
+.checkbox {
+   padding:1rem 0;
+}
+
+.loginbox {
+   margin: 0em auto;
+   background: #fff;
+}
+
+.loginbox-title {
+   width: 100%;
+   font-size: 1.5rem;
+   font-weight: 700;
+   letter-spacing: 2px;
+   color: #607D8B;
+   position: relative;
+   display: block;
+   margin-bottom: 1.5rem;
+}
+
+.loginbox-title:before {
+   content: "";
+   width: 0.2rem;
+   height: 100%;
+   position: absolute;
+   top: 0;
+   left: -1.5rem;
+   background: #607D8B;
+}
+
+.loginbox-group { 
+   position: relative; 
+   margin-bottom: 45px; 
+}
+
+.loginbox-group input {
+   font-size: 18px;
+   padding: 1.5rem 1rem 1.5rem 0.4rem;
+   -webkit-appearance: none;
+   display: block;
+   color: #636363;
+   background: none;
+   width: 100%;
+   border: none !important;
+   box-shadow: none !important;
+   border-radius: 0;
+   border-bottom: 1px solid #ccc !important;
+   margin-bottom: 0 !important;
+   font-size: 1.5rem;
+}
+
+.loginbox-group input:focus { outline: none; background: none !important; cursor: }
+
+
+/* Label */
+
+.loginbox-label {
+   color: #999; 
+   font-size: 18px;
+   font-weight: normal;
+   position: absolute;
+   pointer-events: none;
+   left: 5px;
+   top: 10px;
+   transition: all 0.2s ease;
+}
+
+
+/* active */
+
+.loginbox-group input:focus ~ .loginbox-label, .loginbox-group input.used ~ .loginbox-label {
+   top: -20px;
+  transform: scale(.75); left: -1em;
+   /* font-size: 14px; */
+   color: #009688;
+}
+
+
+/* Underline */
+
+.bar {
+   position: relative;
+   display: block;
+   width: 100%;
+}
+
+.bar:before, .bar:after {
+   content: '';
+   height: 2px; 
+   width: 0;
+   bottom: 1px; 
+   position: absolute;
+   background: #009688; 
+   transition: all 0.2s ease;
+}
+
+.bar:before { left: 50%; }
+
+.bar:after { right: 50%; }
+
+
+/* active */
+
+.loginbox-group input:focus ~ .bar:before, .loginbox-group input:focus ~ .bar:after { width: 50%; }
+
+
+/* Highlight */
+
+.highlight {
+   position: absolute;
+   height: 60%; 
+   width: 100px; 
+   top: 25%; 
+   left: 0;
+   pointer-events: none;
+   opacity: 0.5;
+}
+
+
+/* active */
+
+.loginbox-group input:focus ~ .highlight {
+   animation: .loginbox-group inputHighlighter 0.3s ease;
+}
+
+
+/* Animations */
+
+@keyframes .loginbox-group inputHighlighter {
+   from { background: #4a89dc; }
+   to    { width: 0; background: transparent; }
+}
+
+
+/* Button */
+
+
+.loginbox-button button {
+   background-color: transparent;
+   background-color: #fff;
+   color: #ED2553;   
+   border: none;
+   -webkit-font-smoothing: antialiased;
+   -webkit-transition: all 0.15s ease;
+   -moz-transition: all 0.15s ease;
+   -ms-transition: all 0.15s ease;
+   -o-transition: all 0.15s ease;
+   transition: all 0.15s ease;
+}
+.loginbox-button button:focus { outline: 0; }
+
+.loginbox-button.button {
+   margin-bottom: 0.5rem;
+}
+
+/* Button modifiers */
+
+.loginbox-button button:hover { background: #357bd8; }
+
+.pass-forgot {
+   width: 100%;
+   float: left;
+   color: rgba(0, 0, 0, 0.4);
+   padding: 0.5rem 0;
+}
+
+/* Ripples container */
+
+.ripples {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: transparent;
+}
+
+
+/* Ripples circle */
+
+.ripplesCircle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.ripples.is-active .ripplesCircle {
+  animation: ripples .4s ease-in;
+}
+
+
+/* Ripples animation */
+
+@keyframes ripples {
+  0% { opacity: 0; }
+
+  25% { opacity: 1; }
+
+  100% {
+    width: 200%;
+    padding-bottom: 200%;
+    opacity: 0;
+  }
+}
