@@ -12,3 +12,7 @@
 */
 
 Route::get('/', 'HomeController@index');
+Route::get('sekolah/{jenis}','DaftarSekolahController@index');
+Route::get('bandingkan', 'BandingkanController@index');
+Route::get('event', 'EventController@index');
+Route::get('rekomendasi', 'RekomendasiController@index');

@@ -29,15 +29,7 @@
 				@include('partials.loginmodal')
 				@include('partials.signupmodal')
 
-				@include('partials.header')
-
-				<div class="parallax-content">
-					
-					@yield('content')
-
-					@include('partials.footer')
-
-				</div>
+				@yield('content')
 
 				<a class="exit-off-canvas"></a>
 

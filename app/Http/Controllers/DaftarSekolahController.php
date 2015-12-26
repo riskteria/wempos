@@ -14,9 +14,9 @@ class DaftarSekolahController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($jenis)
     {
-        //
+        return view('pages.sekolah', ['jenis' => $jenis]);
     }
 
     /**

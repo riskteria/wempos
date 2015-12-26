@@ -16,18 +16,32 @@
 					<!-- TOP BAR MENU ELEMENTS -->
 					<section class="top-bar-section">
 						<ul class="left">
-							<li class="active"><a href="{{ url('/') }}"><span class="topbar-icon"><i class="fi-home"></i></span>Home</a></li>
-							<li class="has-dropdown">
+							<li class="@if(Request::is('/')) {{ 'active' }} @endif">
+								<a href="{{ url('/') }}"><span class="topbar-icon"><i class="fi-home"></i></span>Home</a>
+							</li>
+							<li class="has-dropdown @if(Request::is('sekolah/sd')) {{ 'active' }} @endif">
 								<a><span class="topbar-icon"><i class="fa fa-list-alt"></i></span>Daftar Sekolah</a>
 								<ul class="dropdown">
-									<li><a href="{{ url('sekolah/sd') }}">SD Sederajat</a></li>
-									<li><a href="{{ url('sekolah/smp') }}">SMP Sederajat</a></li>
-									<li><a href="{{ url('sekolah/sma') }}">SMA Sederajat</a></li>
+									<li class="@if(Request::is('sekolah/sd')) {{ 'active' }} @endif">
+										<a href="{{ url('sekolah/sd') }}">SD Sederajat</a>
+									</li>
+									<li class="@if(Request::is('sekolah/smp')) {{ 'active' }} @endif">
+										<a href="{{ url('sekolah/smp') }}">SMP Sederajat</a>
+									</li>
+									<li class="@if(Request::is('sekolah/sma')) {{ 'active' }} @endif">
+										<a href="{{ url('sekolah/sma') }}">SMA Sederajat</a>
+									</li>
 								</ul>
 							</li>
-							<li><a href="{{ url ('bandingkan') }}"><span class="topbar-icon"><i class="fa fa-sticky-note"></i></span>Bandingkan</a></li>
-							<li><a href="{{ url('event') }}"><span class="topbar-icon"><i class="fa fa-calendar-o"></i></span>Event</a></li>
-							<li><a href="{{ url('rekomendasi') }}"><span class="topbar-icon"><i class="fa fa-star"></i></span>Rekomendasi</a></li>
+							<li class="@if(Request::is('bandingkan')) {{ 'active' }} @endif">
+								<a href="{{ url ('bandingkan') }}"><span class="topbar-icon"><i class="fa fa-sticky-note"></i></span>Bandingkan</a>
+							</li>
+							<li class="@if(Request::is('event')) {{ 'active' }} @endif">
+								<a href="{{ url('event') }}"><span class="topbar-icon"><i class="fa fa-calendar-o"></i></span>Event</a>
+							</li>
+							<li class="@if(Request::is('rekomendasi')) {{ 'active' }} @endif">
+								<a href="{{ url('rekomendasi') }}"><span class="topbar-icon"><i class="fa fa-star"></i></span>Rekomendasi</a>
+							</li>
 						</ul>
 
 						<ul class="right">

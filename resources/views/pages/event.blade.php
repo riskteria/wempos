@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title') Selamat Datang di WEMPOS @endsection
+@section('title') Daftar Event @endsection
 
 @include('partials.header') @show
 
