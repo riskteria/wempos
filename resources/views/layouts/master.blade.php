@@ -27,6 +27,7 @@
 				@include('partials.sidebar')
 				@include('partials.topbar')
 				@include('partials.loginmodal')
+				@include('partials.signupmodal')
 
 				@include('partials.header')
 

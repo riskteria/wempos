@@ -5,7 +5,7 @@
 		<div class="large-4 columns">
 			<div class="reveal-card mdc-bg-blue-grey">
 				<div class="reveal-card-image">
-					<img class="img-responsive" src="resource/icon/external/graduation-cap2.svg">
+					<img class="img-responsive" src="{{ asset('icon/external/graduation-cap2.svg') }}">
 
 				</div>
 				<!-- card image -->
@@ -31,7 +31,7 @@
 		<div class="large-4 columns">
 			<div class="reveal-card mdc-bg-red-pink">
 				<div class="reveal-card-image">
-					<img class="img-responsive" src="resource/icon/external/marketing8.svg">
+					<img class="img-responsive" src="{{ asset('icon/external/marketing8.svg') }}">
 
 				</div>
 				<!-- card image -->
@@ -57,7 +57,7 @@
 		<div class="large-4 columns">
 			<div class="reveal-card mdc-bg-teal">
 				<div class="reveal-card-image">
-					<img class="img-responsive" src="resource/icon/external/user168.svg">
+					<img class="img-responsive" src="{{ asset('icon/external/user168.svg') }}">
 
 				</div>
 				<!-- card image -->
