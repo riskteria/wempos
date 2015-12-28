@@ -1,6 +1,6 @@
 ##Cara Install
 
-Install [Composer](https://getcomposer.org/download) terlebih dahulu
+Install [Composer](https://getcomposer.org/composer-setup.exe) terlebih dahulu
 
 Lalu Ketik perintah berikut:
 
