@@ -6,16 +6,16 @@ Perhatikan cara install terlebih dahulu
 
 * Install Composer terlebih dahulu
 * Lalu jalankan perintah berikut:
-	$ Composer Install
-	$ Composer Update
+    $ Composer Install
+    $ Composer Update
 
 -----
 
 * ubah exv.example menjadi .env
 * Lalu jalankan perintah berikut:
-	php artisan key:generate
-	php artisan db:seed
-	php artisan serve
+    php artisan key:generate
+    php artisan db:seed
+    php artisan serve
 
 -----
 
