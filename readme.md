@@ -27,3 +27,14 @@ Perhatikan cara install terlebih dahulu
 -----
 
 Buka website dari localhost:8000
+
+
+
+Install dependencies listed in package.json with:
+
+    npm install
+
+Retrieve frontend dependencies with Bower, compile SASS, and move frontend files into place:
+
+    gulp
+
