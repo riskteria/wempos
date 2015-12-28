@@ -1,5 +1,7 @@
 # wempos
 
+Perhatikan cara install terlebih dahulu
+
 ##Cara Install
 
 * Install Composer terlebih dahulu
