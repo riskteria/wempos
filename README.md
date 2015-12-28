@@ -1,6 +1,6 @@
 ##Cara Install
 
-Install [Composer](https://getcomposer.org/composer-setup.exe) terlebih dahulu
+Download dan Install [Composer](https://getcomposer.org/) terlebih dahulu
 
 Lalu Ketik perintah berikut:
 
@@ -16,7 +16,7 @@ Jalankan perintah berikut:
     php artisan key:generate
 
 
-    php artisan migrate:seed
+    php artisan migrate --seed
 
 
     php artisan serve
