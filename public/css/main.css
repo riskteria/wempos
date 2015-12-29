@@ -583,6 +583,7 @@ header h1 {
 	text-overflow:ellipsis;
 	overflow:hidden;
 	color:#CFD8DC;
+	text-align: justify;
 }
 
 .card-poster {

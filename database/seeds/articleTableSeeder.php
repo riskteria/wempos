@@ -18,6 +18,8 @@ class articleTableSeeder extends Seeder
         Articles::create([
         	'user_id'	=> 1,
         	'title'		=> 'Sekolah Jangan Berkompetisi, tapi Berkolaborasi',
+            'category'  => 'news',
+            'slug'      => 'Sekolah-Jangan-Berkompetisi-Tapi-Berkolaborasi',
         	'intro'		=> 'Keberadaan sekolah-sekolah yang ada diharapkan tidak saling berkompetisi satu sama lain. Melainkan sama-sama berkolaborasi untuk bisa menciptakan kualitas pendidikan yang lebih baik lagi.',
         	'content'	=> 'JAKARTA - Keberadaan sekolah-sekolah yang ada diharapkan tidak saling berkompetisi satu sama lain. Melainkan sama-sama berkolaborasi untuk bisa menciptakan kualitas pendidikan yang lebih baik lagi.
 

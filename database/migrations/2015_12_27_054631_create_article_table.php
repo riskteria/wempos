@@ -18,6 +18,8 @@ class CreateArticleTable extends Migration
             $table->timestamp('updated_at')->nullable();
             $table->integer('user_id');
             $table->string('title');
+            $table->string('category');
+            $table->string('slug');
             $table->text('intro');
             $table->text('content');
         });

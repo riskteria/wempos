@@ -16,7 +16,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('pages.home');
+        $articles = \App\Articles::all();
+        $data     = array(
+                    'articles'  => $articles       
+            );
+        return view('pages.home', $data);
     }
 
     /**
