@@ -24,5 +24,35 @@ class userTableSeeder extends Seeder
             'confirmed'         => true,
             'confirmation_code' => md5(microtime() . env('APP_KEY')),
         ]);
+
+        User::create([
+            'username'          => 'sandyputra',
+            'display_name'      => 'SMK Swasta Telkom Sandy Putra',
+            'email'             => 'sandyputra@gmail.com',
+            'password'          => bcrypt('sekolah'),
+            'role'              => 'sekolah',
+            'confirmed'         => true,
+            'confirmation_code' => md5(microtime() . env('APP_KEY')),
+        ]);
+
+        User::create([
+            'username'          => 'mandiri',
+            'display_name'      => 'Bank Mandiri',
+            'email'             => 'mandiri@gmail.com',
+            'password'          => bcrypt('organisasi'),
+            'role'              => 'organisasi',
+            'confirmed'         => true,
+            'confirmation_code' => md5(microtime() . env('APP_KEY')),
+        ]);
+
+        User::create([
+            'username'          => 'user',
+            'display_name'      => 'User',
+            'email'             => 'user@gmail.com',
+            'password'          => bcrypt('user'),
+            'role'              => 'user',
+            'confirmed'         => true,
+            'confirmation_code' => md5(microtime() . env('APP_KEY')),
+        ]);
     }
 }

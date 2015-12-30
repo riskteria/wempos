@@ -24,10 +24,11 @@
 
 			<div class="large-12 content active" id="berita-panel-1">
 				<div class="row">
-					
+
+					<?php $counter = 0;?>
 					@foreach($articles as $article)
 
-						<div class="medium-4 large-4 columns">
+						<div class="medium-4 large-4 columns left">
 							<article class="card">
 								<div style="background-image:url({{ asset('img/article/'.$article->id.'.jpg') }})" class="card__image">
 									<div class="card-header-mask">
@@ -69,6 +70,14 @@
 
 							</article>
 						</div>
+						
+						<?php
+							$counter++;
+							if($counter >= 3) {
+								$counter = 0;
+								echo"</div><div class='row'>";
+							}
+						?>
 
 					@endforeach
 
@@ -77,6 +86,63 @@
 
 			<div class="large-12 content" id="berita-panel-2">
 				<div class="row">
+					
+					<?php $counter = 0 ?>
+					@foreach($activities as $activity)
+
+						<div class="medium-4 large-4 columns">
+							<article class="card">
+								<div style="background-image:url({{ asset('img/article/'.$activity->id.'.jpg') }})" class="card__image">
+									<div class="card-header-mask">
+										<div class="card-header-date">
+											<div class="card-header-date-day">
+												{{ date('d', strtotime($activity->created_at)) }}
+											</div>
+											<div class="card-header-date-month">
+												{{ date('M', strtotime($activity->created_at)) }}
+											</div>
+										</div>
+									</div>
+								</div>
+								
+								<h5 class="card__title">
+									<a href="{{ url('article/'.$activity->slug) }}" title="{{ $activity->title }}">
+										{{ $activity->title }}
+									</a>
+								</h5>
+
+								<div class="card-body">
+									<p class="card__text">{{ $activity->intro }}</p>
+									<div class="card-poster">By 
+										<a href="{{ url('user/'.$activity->User->username) }}">
+											{{ $article->User->display_name }}
+										</a>
+									</div>
+									<div class="clearfix card__action-bar">
+										<div class="card__button left">
+											<a href="{{ url('article/'.$activity->slug) }}">
+												<span class="fa fa-comment"></span> 24 Comment</a>
+										</div>
+										<div class="card__button right">
+											<a href="{{ url('article/'.$activity->slug) }}" class="action_button">
+												<span class="fa fa-arrow-right"></span></a>
+										</div>
+									</div>
+								</div>
+
+							</article>
+						</div>
+
+						<?php
+							$counter++;
+							if($counter >= 3) {
+								$counter = 0;
+								echo"</div><div class='row'>";
+							}
+						?>
+
+					@endforeach
+
 				</div>
 			</div>
 

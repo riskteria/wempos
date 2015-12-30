@@ -209,7 +209,7 @@ Pada 14 detik terakhir, laga berlangsung sengit. Masing-masing tim berhasil mena
 "Enggak menyangka sama sekali karena dari awal kami tidak ada target untuk menjadi juara. Apalagi ini keikutsertaan kami yang pertama dan langsung menjadi juara. Senang banget," ungkap Roziah yang tampak semringah.
 
 "Agak kaget juga. Tadi pas overtime mikirnya bagaimana supaya bisa langsung menang karena cepat-cepatan raih angka. Ya mau tidak mau harus main dua poin biar langsung menang. Ternyata bisa," pungkas Roziah.
-Sebagai juara, SMA Diponegoro Blitar dan SMAN 71 Jakarta berhak mendapatkan hadiah utama yakni tiket ke Amerika Serikat. Mereka akan terbang ke 'Negeri Paman Sam' pada bulan November mendatang. Tahun lalu, juara kompetisi ini, SMA IPH Surabaya dan SMA Tri Tunggal Semarang, juga diterbangkan ke AS dan mendapat kesempatan untuk mengikuti coaching clinic, menonton laga basket, dan mengikuti seminar soal basket.',
+Sebagai juara, SMA Diponegoro Blitar dan SMAN 71 Jakarta berhak mendapatkan hadiah utama yakni tiket ke Amerika Serikat. Mereka akan terbang ke "Negeri Paman Sam" pada bulan November mendatang. Tahun lalu, juara kompetisi ini, SMA IPH Surabaya dan SMA Tri Tunggal Semarang, juga diterbangkan ke AS dan mendapat kesempatan untuk mengikuti coaching clinic, menonton laga basket, dan mengikuti seminar soal basket.',
         ]);
         Articles::create([
         	'user_id'	=> 1,

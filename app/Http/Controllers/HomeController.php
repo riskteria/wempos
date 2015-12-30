@@ -16,9 +16,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $articles = \App\Articles::all();
-        $data     = array(
-                    'articles'  => $articles       
+        $articles   = \App\Articles::all()->where('category','news');
+        $activities = \App\Articles::all()->where('category','activity');
+        $data       = array(
+                      'articles'   => $articles,
+                      'activities' => $activities      
             );
         return view('pages.home', $data);
     }
