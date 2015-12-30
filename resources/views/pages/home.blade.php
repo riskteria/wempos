@@ -5,7 +5,7 @@
 
 @section('content')
 
-@include('partials.header')
+	@include('partials.header')
 
 	<div class="parallax-content">
 		
