@@ -583,7 +583,6 @@ header h1 {
 	text-overflow:ellipsis;
 	overflow:hidden;
 	color:#CFD8DC;
-	text-align: justify;
 }
 
 .card-poster {
@@ -766,8 +765,9 @@ header h1 {
     margin: 0; }
 
 footer {
-	background-color: #074e68;
+	background-color: #eeeeee;
 	padding: 2.5rem 0 2rem 0;
+    
 }
 
 footer h4,
