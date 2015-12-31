@@ -17,7 +17,7 @@ class ArticleController extends Controller
     public function index($slug)
     {
         $article = \App\Articles::where('slug','=',$slug)->first();        
-        $articles = \App\Articles::where('slug','!=',$slug);
+        $articles = \App\Articles::whereNotIn('slug',array($slug))->take(3)->get();
 
         $data     = array(
                     'article'  => $article,  

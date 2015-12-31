@@ -24,6 +24,7 @@
 				
 		</header>
 		<!-- END HEADER -->
+	@show
 
 		<div class="parallax-content read-article">
 			<!-- MAIN SECTION -->
@@ -93,10 +94,10 @@
 				</section>
 
 			</section>
+
+			@include('partials.footer')
+
 		</div>
 
-	@show
-
-	@include('partials.footer')
 
 @endsection
