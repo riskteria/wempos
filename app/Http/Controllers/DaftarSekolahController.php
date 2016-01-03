@@ -37,7 +37,7 @@ class DaftarSekolahController extends Controller
                 );
         }
 
-        elseif($jenjang == 'smk'){
+        elseif($jenjang == 'sma'){
             $sma = Schools::all()->where('jenjang', 'SMA');
             $smk = Schools::all()->where('jenjang', 'SMK');
             $data    = array(
@@ -45,6 +45,9 @@ class DaftarSekolahController extends Controller
                         'tipe2' => $smk
                 );
         }
+
+        else
+            return view('errors.404');
 
         return view('pages.sekolah', $data);
     }

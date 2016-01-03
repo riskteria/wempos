@@ -19,7 +19,7 @@
 							<li class="tab-title active"><a href="#tipe1">SMP</a></li>
 							<li class="tab-title"><a href="#tipe2">MTS</a></li>
 
-						@elseif(Request::is('sekolah/smk'))
+						@elseif(Request::is('sekolah/sma'))
 							<li class="tab-title active"><a href="#tipe1">SMA</a></li>
 							<li class="tab-title"><a href="#tipe2">SMK</a></li>
 
@@ -37,12 +37,37 @@
       <div class="large-12 content active" id="tipe1">
         <div class="full-width">
         	<div class="row">
+
+						<ul class="small-block-grid-1 medium-block-grid-3">
         		
+        		<?php $counter = 1 ?>
         		@forelse($tipe1 as $tipe)
-							{{ $tipe->provinsi }}
+              <li>
+                <ul class="accordion" data-accordion="myAccordionGroup">
+                  <li class="accordion-navigation">
+                  	<a href="#panel-{{ $counter }}">{{ $tipe->provinsi }}</a>
+                    <div id="panel-{{ $counter }}" class="content">
+                      <ul class="accordion2" data-accordion="">
+                        <li class="accordion-navigation">
+                          <a href="#panel-{{ $counter }}a">{{ $tipe->kota }}</a>
+                          <div id="panel-{{ $counter }}a" class="content">
+                            <a href="{{ url('profil/'.$tipe->id) }}"><span class="fa fa-angle-right topbar-icon"></span>
+															{{ $tipe->nama_sekolah }}
+                            </a>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                	</li>
+              	</ul>
+              </li>
+
+              <?php $counter++ ?>
         		@empty
-        			{{ "Tidak ada data" }}
+        			{{ "Belum ada sekolah" }}
         		@endforelse
+
+        		</ul>
 
         	</div>
         </div>
@@ -52,11 +77,36 @@
         <div class="full-width">
         	<div class="row">
         		
+        		<ul class="small-block-grid-1 medium-block-grid-3">
+        		
+        		<?php $counter = 1 ?>
         		@forelse($tipe2 as $tipe)
-							{{ $tipe->provinsi }}
+              <li>
+                <ul class="accordion" data-accordion="myAccordionGroup">
+                  <li class="accordion-navigation">
+                  	<a href="#panel-{{ $counter }}">{{ $tipe->provinsi }}</a>
+                    <div id="panel-{{ $counter }}" class="content">
+                      <ul class="accordion2" data-accordion="">
+                        <li class="accordion-navigation">
+                          <a href="#panel-{{ $counter }}a">{{ $tipe->kota }}</a>
+                          <div id="panel-{{ $counter }}a" class="content">
+                            <a href="{{ url('profil/'.$tipe->id) }}"><span class="fa fa-angle-right topbar-icon"></span>
+															{{ $tipe->nama_sekolah }}
+                            </a>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                	</li>
+              	</ul>
+              </li>
+
+              <?php $counter++ ?>
         		@empty
-        			{{ "Tidak ada data" }}
+        			{{ "Belum ada sekolah" }}
         		@endforelse
+
+        		</ul>
         		
         	</div>
         </div>

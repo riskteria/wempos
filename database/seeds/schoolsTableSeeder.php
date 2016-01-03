@@ -233,59 +233,6 @@ MISI SD PANGUDI LUHUR JAKARTA
         ]);
               Schools::create([
             'user_id'       => null,
-            'nama_sekolah'  => 'SDN KACOK 2 Pamekasan',
-            'jenjang'       => 'SD',
-            'tipe'          => 'Negeri',
-            'alamat'        => 'Dusun Lot Polot',
-            'kota'          => 'Pamekasan',
-            'provinsi'      => 'Jawa Timur',
-            'nomor_pokok'   => '20526814',
-            'confirmed'     => true,
-            'profil'        => 'VISI SDN KACOK 02
-                                #“Mewujudkan berprestasi, kreatif dan kompetitif berdasarkan Ilmu, Iman dan Taqwa”
-                                #Visi SDN Kacok 02 untuk tujuan jangka panjang, menengah dan pendek serta menjadi jiwa warga sekolah untuk selalu mewujudkannya setiap saat dan berkelanjutan untuk mencapai tujuan sekolah.Visi tersebut mencerminkan profil dan tujuan sekolah untuk:
-                                #Meningkatkan ke-taqwa-an kepada Allah SWT kepada seluruh warga sekolah. 
-                                #Meningkatkan komitmen dan semangat warga sekolah menuju prestasi. 
-                                #Menyesuai dengan norma dan harapan masyarakat. 
-                                #Mendorong terbentuknya perubahan yang lebih baik. 
-                                #Memperhatikan potensi kekinian untuk berorientasi ke depan. 
-
-                                Indikator 
-                                #Terwujudnya peningkatan SDM pendidik. 
-                                #Terwujudnya rencana induk pengembangan sarana prasarana pendidikan 
-                                #Terwujudnya peningkatan kualitas lulusan dalam bidang akademik maupun non akademik 
-                                #Terwujudnya pelaksanaan manajemen berbasis sekolah dan peningkatan mutu kelembagaan. 
-                                #Meningkatnya pengembangan kurikulum satuan pendidikan yang mampu mengakomodasi kebutuhan peserta didik dan masyarakat. 
-                                #Meningkatnya proses pembelajaran 
-                                #Terjalinnya program penggalangan pembiayaan sekolah yang melibatkan partisipasi masyarakat. 
-                                #Unggul dalam prestasi akademik, non akademik dalam imtaq. 
-
-                                MISI SDN KACOK 02 
-                                Melaksanakan pembelajaran akademik dengan aktif, kreatif, efektif dan menyenangkan; 
-                                #Melaksanakan Pengembangan Kurikulum 
-                                #Melaksanakan Pengembangan Tenaga Kependidikan 
-                                #Melaksanakan Pengembangan Proses pembelajaran. 
-                                #Melaksanakan Rencana Induk Pengembangan Fasilitas Pendidikan 
-                                #Melaksanakan Pengembangan/Peningkatan Standar Ketuntasan dan Kelulusan. 
-                                #Melaksanakan Pengembangan Kelembagaan dan Manajemen Sekolah. 
-                                #Melaksanakan Program Penggalangan Pembiayaan Sekolah 
-                                #Melaksanakan Pengembangan Penilaian 
-
-                                Melaksanakan Program-program Strategis untuk sekolah; 
-                                #Sosialisasi, kerjasama yang sinergis dengan stakeholder. 
-                                #Diklat, Workshop, Seminar, In house training. 
-                                #Pengaktifan KKG. 
-                                #Pembinaan potensi siswa melalui Ekstrakurikuler maupun Lomba 
-                                #Pembekalan, Pemberdayaan, Studi banding, Rekreasi
-                                ',
-            'fasilitas'     => '',
-            'prestasi'      => '',
-            'biaya'         => '',
-            'kegiatan'      => '',
-
-        ]);
-              Schools::create([
-            'user_id'       => null,
             'nama_sekolah'  => 'SMA Negeri 1 Cisarua',
             'jenjang'       => 'SMA',
             'tipe'          => 'Negeri',
