@@ -41,7 +41,7 @@
         		@forelse($tipe1 as $tipe)
 							{{ $tipe->provinsi }}
         		@empty
-        			{{ "tidak ada data" }}
+        			{{ "Tidak ada data" }}
         		@endforelse
 
         	</div>

@@ -2,7 +2,7 @@
 				<!--Header slider with orbit-->
 	<ul id="featured" class="orbit-content" data-orbit data-options="animation:slide; animation_speed:1000; pause_on_hover:true; animation_speed:500; navigation_arrows:true; bullets:false;">
 		<li data-orbit-slide="headline-1">
-			<img src="resource/img/2.jpg" alt="Picture 1">
+			<img src="{{ asset('img/2.jpg') }}" alt="Picture 1">
 			<div class="orbit-caption">
 				<div class="row clearfix">
 
@@ -34,7 +34,7 @@
 			</div>
 		</li>
 		<li data-orbit-slide="headline-2">
-			<img src="{{ asset('img/activity/1.jpg') }}" alt="Picture 1">
+			<img src="{{ asset('img/article/1.jpg') }}" alt="Picture 1">
 			<div class="orbit-caption">
 				<div class="row clearfix">
 
@@ -49,7 +49,7 @@
 			</div>
 		</li>
 		<li data-orbit-slide="headline-3">
-			<img src="resource/img/activity/2.jpg" alt="Picture 1">
+			<img src="{{ asset('img/article/10.jpg') }}" alt="Picture 1">
 			<div class="orbit-caption">
 				<div class="row clearfix">
 
