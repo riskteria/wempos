@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Schools as Schools;
 
 class DaftarSekolahController extends Controller
 {
@@ -14,9 +15,38 @@ class DaftarSekolahController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($jenis)
+    public function index($jenjang)
     {
-        
+
+        if($jenjang == 'sd')
+        {
+            $sd  = Schools::all()->where('jenjang', 'SD');
+            $min = Schools::all()->where('jenjang', 'MIN');
+            $data    = array(
+                        'tipe1' => $sd,
+                        'tipe2' => $min
+                );
+        }
+
+        elseif($jenjang == 'smp'){
+            $smp = Schools::all()->where('jenjang', 'SMP');
+            $mts = Schools::all()->where('jenjang', 'MTS');
+            $data    = array(
+                        'tipe1' => $smp,
+                        'tipe2' => $mts
+                );
+        }
+
+        elseif($jenjang == 'smk'){
+            $sma = Schools::all()->where('jenjang', 'SMA');
+            $smk = Schools::all()->where('jenjang', 'SMK');
+            $data    = array(
+                        'tipe1' => $sma,
+                        'tipe2' => $smk
+                );
+        }
+
+        return view('pages.sekolah', $data);
     }
 
     /**
