@@ -32,7 +32,7 @@ class userTableSeeder extends Seeder
             'password'          => bcrypt('sekolah'),
             'role'              => 'sekolah',
             'confirmed'         => true,
-            'confirmation_code' => md5(microtime() . env('APP_KEY')),
+            'confirmation_code' => md5(microtime() . env('APP_KEY')), 
         ]);
 
         User::create([

@@ -16,7 +16,7 @@ class DaftarSekolahController extends Controller
      */
     public function index($jenis)
     {
-        return view('pages.sekolah', ['jenis' => $jenis]);
+        
     }
 
     /**

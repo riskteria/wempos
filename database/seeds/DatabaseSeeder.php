@@ -18,6 +18,8 @@ class DatabaseSeeder extends Seeder
         $this->command->info('Create Sample User Succesfully');
         $this->call(articleTableSeeder::class);
         $this->command->info('Create Sample Article Succesfully');
+        $this->call(schoolsTableSeeder::class);
+        $this->command->info('Create Sample School Succesfully');
 
 
         Model::reguard();
