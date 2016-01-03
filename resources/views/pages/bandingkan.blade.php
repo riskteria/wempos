@@ -50,6 +50,30 @@
             <th>Tipe Sekolah</th>
             <td>@if(isset($sekolah2)){{ $sekolah2->tipe }} @endif</td>
           </tr>
+          
+          <tr>
+            <td>@if(isset($sekolah1)){{ $sekolah1->fasilitas }} @endif</td>
+            <th>Fasilitas</th>
+            <td>@if(isset($sekolah2)){{ $sekolah2->fasilitas }} @endif</td>
+          </tr>
+          
+          <tr>
+            <td>@if(isset($sekolah1)){{ $sekolah1->prestasi }} @endif</td>
+            <th>Prestasi</th>
+            <td>@if(isset($sekolah2)){{ $sekolah2->prestasi }} @endif</td>
+          </tr>
+          
+          <tr>
+            <td>@if(isset($sekolah1)){{ $sekolah1->biaya }} @endif</td>
+            <th>Biaya</th>
+            <td>@if(isset($sekolah2)){{ $sekolah2->biaya }} @endif</td>
+          </tr>
+          
+          <tr>
+            <td>@if(isset($sekolah1)){{ $sekolah1->kegiatan }} @endif</td>
+            <th>Kegiatan</th>
+            <td>@if(isset($sekolah2)){{ $sekolah2->kegiatan }} @endif</td>
+          </tr>
 
 				</table>
 			</div>
