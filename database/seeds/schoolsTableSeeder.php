@@ -34,7 +34,7 @@ class schoolsTableSeeder extends Seeder
         ]);
 
         Schools::create([
-            'user_id'       => 2,
+            'user_id'       => null,
             'nama_sekolah'  => '',
             'jenjang'       => '',
             'tipe'          => '',
