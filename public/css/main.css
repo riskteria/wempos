@@ -699,6 +699,7 @@ header h1 {
 
 .compare-table td{
 	width: 40%;
+	vertical-align: top;
 }
 
 .compare-table td:first-child{
@@ -710,6 +711,7 @@ header h1 {
 	text-align: center;
 	border-left: solid 1px #ccc;
 	border-right: solid 1px #ccc;
+	vertical-align: top;
 }
 
 .comparre-table td div img {

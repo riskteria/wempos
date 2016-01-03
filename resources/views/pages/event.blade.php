@@ -2,9 +2,11 @@
 
 @section('title') Daftar Event @endsection
 
-@include('partials.header') @show
 
 @section('content')
+	
+	@include('partials.header')
+	
 	<div class="parallax-content">
 		
 
