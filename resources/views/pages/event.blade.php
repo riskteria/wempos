@@ -9,6 +9,7 @@
 	
 	<div class="parallax-content">
 		
+		
 
 		@include('partials.footer')
 
