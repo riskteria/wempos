@@ -781,6 +781,12 @@ footer p {
 	padding: 1.2rem 0 0 0;
 }
 
+.tabs-profil li {
+	width: 95%;
+	border-bottom: 1px solid #fff;
+
+}
+
 /* Small screens */
 
 @media only screen and (max-width: 40em) {
