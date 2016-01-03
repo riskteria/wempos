@@ -6,9 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\Schools as Schools;
 
-class BandingkanController extends Controller
+class SearchController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,7 +16,23 @@ class BandingkanController extends Controller
      */
     public function index()
     {
-        return view('pages.bandingkan');
+        //
+    }
+    public function autocomplete(){
+        $term = Input::get('term');
+        
+        $results = array();
+        
+        $queries = DB::table('users')
+            ->where('first_name', 'LIKE', '%'.$term.'%')
+            ->orWhere('last_name', 'LIKE', '%'.$term.'%')
+            ->take(5)->get();
+        
+        foreach ($queries as $query)
+        {
+            $results[] = [ 'id' => $query->id, 'value' => $query->first_name.' '.$query->last_name ];
+        }
+    return Response::json($results);
     }
 
     /**
@@ -25,23 +40,9 @@ class BandingkanController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function banding()
+    public function searchUser()
     {
-        $data  = array();
-
-        $cari1 = $_POST['cari1'];
-        $cari2 = $_POST['cari2'];
-
-        $sekolah1   = Schools::where('nama_sekolah','like','%'.$cari1.'%')->first();
-        $sekolah2   = Schools::where('nama_sekolah','like','%'.$cari2.'%')->first();
-
-        $data  = array(
-                    'cari1'    => $cari1,
-                    'cari2'    => $cari2,
-                    'sekolah1' => $sekolah1,
-                    'sekolah2' => $sekolah2
-        );
-        return view('pages.bandingkan', $data);
+        //
     }
 
     /**

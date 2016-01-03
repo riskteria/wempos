@@ -42,6 +42,7 @@
     <script src="{{ asset('js/vendor/motion-ui.js') }}"></script>
     <script src="{{ asset('js/vendor/slideUp.js') }}"></script>
     <script src="{{ asset('js/main.js') }}"></script>
+	@yield('scripts')
 
 	</body>
 </html>

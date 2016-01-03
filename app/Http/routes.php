@@ -22,3 +22,5 @@ Route::get('profil/{id}', 'ProfilController@index');
 Route::get('tentang','FooterController@tentang');
 Route::get('kebijakan','FooterController@kebijakan');
 Route::get('syarat','FooterController@syarat');
+
+Route::post('BandingProses', 'BandingkanController@banding');
