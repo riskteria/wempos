@@ -32,23 +32,4 @@ class schoolsTableSeeder extends Seeder
             'kegiatan'      => '',
 
         ]);
-
-        Schools::create([
-            'user_id'       => null,
-            'nama_sekolah'  => '',
-            'jenjang'       => '',
-            'tipe'          => '',
-            'alamat'        => '',
-            'kota'          => '',
-            'provinsi'      => '',
-            'nomor_pokok'   => '',
-            'confirmed'     => true,
-            'profil'        => '',
-            'fasilitas'     => '',
-            'prestasi'      => '',
-            'biaya'         => '',
-            'kegiatan'      => '',
-
-        ]);
-    }
 }
