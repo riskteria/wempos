@@ -19,12 +19,17 @@ class DashboardController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($role)
+    public function index()
     {
         $user   = Auth::user();
         $data   = array();
 
         if($user->role == 'admin')
+        {
+            $data = $this->admincount();
+        }
+
+        elseif($user->role == 'sekolah')
         {
             $data = $this->admincount();
         }

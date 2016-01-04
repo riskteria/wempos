@@ -25,7 +25,11 @@ Route::get('tentang','FooterController@tentang');
 Route::get('kebijakan','FooterController@kebijakan');
 Route::get('syarat','FooterController@syarat');
 
-Route::get('dashboard/{role}', 'DashboardController@index');
+Route::get('dashboard/admin', 'DashboardController@index');
+
+Route::get('dashboard/sekolah', 'SekolahController@index');
+Route::get('dashboard/sekolah/Information', 'SekolahController@information');
+Route::post('dashboard/sekolah/simpaninfo', 'SekolahController@simpaninfo');
 
 Route::post('BandingProses', 'BandingkanController@banding');
 
