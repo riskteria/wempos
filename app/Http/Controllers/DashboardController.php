@@ -26,21 +26,78 @@ class DashboardController extends Controller
 
         if($user->role == 'admin')
         {
-            $articles   = Articles::where('category','news')->count();
-            $activities = Articles::where('category','activity')->count();
-            $events     = Events::all()->count();
-            $users      = Users::all()->count();
-
-            $data       = array(
-                        'articles'   => $articles,
-                        'activities' => $activities,
-                        'events'     => $events,
-                        'users'      => $users,
-                );
-
+            $data = $this->admincount();
         }
 
         return view($role.'.home', $data);
+    }
+
+    public function adminview($count)
+    {
+        $data   = array();
+
+        if($count == 'articles')
+        {
+
+            $articles = Articles::all();
+            $data       = array(
+                        'articles'   => $articles,
+                );
+
+            return view('admin.viewarticles', $data);
+        }
+
+        elseif($count == 'activities')
+        {
+
+            $activities = Articles::all();
+            $data       = array(
+                        'activities'   => $activities,
+                );
+
+            return view('admin.viewactivities', $data);
+        }
+
+        elseif($count == 'events')
+        {
+
+            $events = Events::all();
+            $data       = array(
+                        'events'   => $events,
+                );
+
+            return view('admin.viewevents', $data);
+        }
+
+        elseif($count == 'users')
+        {
+
+            $users = Users::all();
+            $data       = array(
+                        'users'   => $users,
+                );
+
+            return view('admin.viewusers', $data);
+        }
+
+        
+    }
+
+    public function admincount()
+    {
+        $articles   = Articles::where('category','news')->count();
+        $activities = Articles::where('category','activity')->count();
+        $events     = Events::all()->count();
+        $users      = Users::all()->count();
+
+        $data       = array(
+                    'articles'   => $articles,
+                    'activities' => $activities,
+                    'events'     => $events,
+                    'users'      => $users,
+            );
+        return $data;
+
     }
 
     /**
@@ -48,6 +105,7 @@ class DashboardController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function create()
     {
         //
@@ -61,7 +119,7 @@ class DashboardController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
     }
 
     /**

@@ -37,3 +37,6 @@ Route::get('auth/logout', 'Auth\AuthController@getLogout');
 // Registration routes...
 Route::get('auth/register', 'Auth\AuthController@getRegister');
 Route::post('auth/register', 'Auth\AuthController@postRegister');
+
+// Bagian Admin
+Route::get('dashboard/admin/{count}', 'DashboardController@adminview');
