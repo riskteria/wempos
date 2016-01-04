@@ -25,8 +25,8 @@
 
 			<!-- Navigation -->
       <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
-      	@include('partials.dashboard.topbar')
-      	@include('partials.dashboard.sidebar')
+      	@include(Auth::user()->role.'.partials.topbar')
+      	@include(Auth::user()->role.'.partials.sidebar')
       </nav>
 
 			<div id="page-wrapper">

@@ -25,7 +25,7 @@ Route::get('tentang','FooterController@tentang');
 Route::get('kebijakan','FooterController@kebijakan');
 Route::get('syarat','FooterController@syarat');
 
-Route::get('dashboard/{role}', function(){ return view('admin.home'); });
+Route::get('dashboard/{role}', 'DashboardController@index');
 
 Route::post('BandingProses', 'BandingkanController@banding');
 
