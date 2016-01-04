@@ -46,10 +46,10 @@
 
 						<ul class="right">
 							<li class="has-form topbar-search-box">
-								<form action="{{ url('pencarian') }}" class="searchbox searchbox-close" method="submit">
-									<input type="search" class="searchbox-input" placeholder="Tuliskan sesuatu">
+								{!! Form::open(array( 'url' => 'pencarian', 'class' => 'searchbox searchbox-close' )) !!}
+									<input type="search" name="search" class="searchbox-input" placeholder="Tuliskan sesuatu">
 									<input type="submit" class="hide">
-								</form>
+								{!! Form::close() !!}
 							</li>
 							<li class="search-trigger hide-small">
 								<a id="searchbox-icon"><i class="fi-magnifying-glass"></i></a>

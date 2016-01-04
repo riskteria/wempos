@@ -19,6 +19,7 @@ Route::get('event', 'EventController@index');
 Route::get('event/{id}', 'EventController@tampil');
 Route::get('rekomendasi', 'RekomendasiController@index');
 Route::get('profil/{id}', 'ProfilController@index');
+ROute::post('pencarian', 'PencarianController@index');
 
 Route::get('tentang','FooterController@tentang');
 Route::get('kebijakan','FooterController@kebijakan');

@@ -129,12 +129,22 @@
 
 											<div class="row">
 												<div class="medium-12 small-12 large-12 columns">
-													
-													@if($school->profil != '')
-														{!! nl2br($school->profil) !!}
-													@else
+
+													<?php
+														$sekolah = array();
+														if($school->profil != '')
+															$sekolah = explode('#', $school->profil);
+													?>
+
+													<ul>
+
+													@forelse($sekolah as $schol)
+														<li> {!! nl2br($schol) !!} </li>
+													@empty
 														<h4 class="center mdc-text-grey">Informasi belum tersedia </h4>
-													@endif
+													@endforelse
+
+													</ul>
 												
 												</div>
 											</div>
