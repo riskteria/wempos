@@ -35,8 +35,8 @@
           </li>
           
           <li>
-              <a class="text-center" href="#">
-                  <strong>See All Alerts</strong>
+              <a class="text-center" href="{{ url('auth/logout') }}">
+                  <strong>logout</strong>
                   <i class="fa fa-angle-right"></i>
               </a>
           </li>
