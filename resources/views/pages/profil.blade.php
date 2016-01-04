@@ -10,7 +10,7 @@
 			<!--Header slider with orbit-->
 			<ul id="featured" class="orbit-content" data-orbit data-options="animation:none; animation_speed:1000; pause_on_hover:true; animation_speed:500; navigation_arrows:false; bullets:false;">
 				<li data-orbit-slide="headline-1">
-						<img src="{{ asset('img/article/'.$school->id.'.jpg') }}" alt="Picture 1">
+						<img src="{{ asset('img/sekolah/'.$school->id.'.jpg') }}" alt="Picture 1">
 						<div class="orbit-caption hide-for-small-only">
 							<div class="row">
 								<div class="large-8 columns">

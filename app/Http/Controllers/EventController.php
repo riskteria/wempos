@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Events as Events;
 
 class EventController extends Controller
 {
@@ -16,7 +17,12 @@ class EventController extends Controller
      */
     public function index()
     {
-        return view('pages.event');
+        $events = Events::orderBy('due_date', 'asc')->get();
+        $data   = array(
+                    'events'    => $events,
+        );
+
+        return view('pages.event', $data);
     }
 
     /**
@@ -24,9 +30,16 @@ class EventController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function tampil($id)
     {
-        //
+        $data   = array();
+        $event  = Events::where('id', $id)->first();
+        $events = Events::whereNotIn('id',array($id))->take(3)->get();
+        $data   = array(
+                    'event'    => $event,
+                    'events'   => $events,
+        );
+        return view('pages.seeevent', $data);
     }
 
     /**

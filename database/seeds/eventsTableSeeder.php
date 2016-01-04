@@ -52,17 +52,6 @@ Upacara penutupan diisi dengan bincang inspiratif oleh Sin Kim Lai yang merupaka
 Dalam acara ini, panitia Liga Merah Maroon Menyumbangkan uang tunai sebesar Rp14.000.000 kepada yayasan  olahraga yang digagas oleh Sin Kim Lai, yaitu Pelangi Basketball Club yang berdomisili di Blitar. Pelangi Basketball Club didirikan oleh Sin Kim lai untuk membantu masyarakat yang kurang mampu untuk dapat berprestasi di bidang olahraga basket. Donasi ini diberikan sebagai bentuk apresiasi dan turut membantu mantan olahragawan yang masih berdedikasi khususnya di bidang sekolah olahraga. Donasi ini diharapkan pula  dapat mewakili rasa terima kasih dan dukungan dari partisipan Liga Merah Maroon 2015 sekaligus mengembangkan olahraga Indonesia.',
         ]);
       
-      Events::create([
-        	'user_id'		=> 1,
-        	'location'		=> 'Blitar, Indonesia',
-        	'title'			=> 'Try Out SBMPTN IPA, IPS, IPC "Get Ready to Shine"',
-        	'due_date'		=> date('Y-m-d h:i:sa', mktime(11, 14, 54, 23, 12, 2016)),
-        	'description'	=> 'Try Out SBMPTN IPA, IPS, IPC "Get Ready to Shine"
-                            Tanggal : 31 Januari 2016
-                            Tempat : Hall Basket Senayan, Jakarta
-                            Informasi lebih lanjut : @trofifebui | www.trofifebui.co.nr',
-        ]);
-      
             Events::create([
         	'user_id'		=> 1,
         	'location'		=> 'Jakarta, Indonesia',

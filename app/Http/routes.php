@@ -16,6 +16,7 @@ Route::get('article/{slug}', 'ArticleController@index');
 Route::get('sekolah/{jenjang}','DaftarSekolahController@index');
 Route::get('bandingkan', 'BandingkanController@index');
 Route::get('event', 'EventController@index');
+Route::get('event/{id}', 'EventController@tampil');
 Route::get('rekomendasi', 'RekomendasiController@index');
 Route::get('profil/{id}', 'ProfilController@index');
 
