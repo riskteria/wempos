@@ -10,6 +10,9 @@ use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 
 class AuthController extends Controller
 {
+
+    protected $username     = 'username';
+    protected $redirectPath = '/admin';
     /*
     |--------------------------------------------------------------------------
     | Registration & Login Controller
@@ -63,5 +66,10 @@ class AuthController extends Controller
         ]);
     }
 
-    protected $redirectPath = '/dashboard';
+    public function authenticated($request, $user)
+    {
+        // Fungsi ini akan dipanggil setelah user berhasil login.
+        // Kita bisa menambahkan aksi-aksi lainnya, misalnya mencatat waktu last_login user.
+        return redirect('admin');
+    }
 }
