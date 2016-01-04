@@ -12,7 +12,6 @@ class AuthController extends Controller
 {
 
     protected $username     = 'username';
-    protected $redirectPath = '/admin';
     /*
     |--------------------------------------------------------------------------
     | Registration & Login Controller
@@ -70,6 +69,9 @@ class AuthController extends Controller
     {
         // Fungsi ini akan dipanggil setelah user berhasil login.
         // Kita bisa menambahkan aksi-aksi lainnya, misalnya mencatat waktu last_login user.
-        return redirect('admin');
+        if($user->role == 'admin')
+            return redirect('admin');
+        else
+            return redirect('dashboard/'.$user->role);
     }
 }
