@@ -1,25 +1,27 @@
 <div id="login-modal" class="reveal-modal" data-reveal aria-labelledby="login modal" aria-hidden="true" role="dialog">
 	<div class="row">
 		<div class="large-6 columns auth-plain">
-			<form class="loginbox">
+
+            {!! Form::open(array('url'=>'auth/login', 'class'=>'loginbox')) !!}	
 				<div class="loginbox-title">LOGIN</div>
 				<div class="loginbox-group">
-					<input type="text" class="loginbox-username" required><span class="highlight"></span><span class="bar"></span>
+					<input name="username" type="text" class="loginbox-username" required><span class="highlight"></span><span class="bar"></span>
 					<label class="loginbox-label">Nama Pengguna</label>
 				</div>
 				<div class="loginbox-group">
-					<input type="password" required><span class="highlight"></span><span class="bar"></span>
+					<input name="password" type="password" required><span class="highlight"></span><span class="bar"></span>
 					<label class="loginbox-label">Password</label>
 				</div>
 				<div class="checkbox checkbox-default">
-					<input id="remember" type="checkbox" value="yes" alt="Remember me" class="radius">
+					<input name="remember" id="remember" type="checkbox" value="yes" alt="Remember me" class="radius">
 					<label for="remember">Remember me</label>
 				</div>
-				<button type="button" class="loginbox-button button">Masuk
+				<button type="submit" class="loginbox-button button">Masuk
 					<div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
 				</button>
 				<a href="" class="pass-forgot">Forgot your password?</a>
-			</form>
+
+			{!! Form::close() !!}
 		</div>
 
 		<div class="large-6 columns auth-plain">

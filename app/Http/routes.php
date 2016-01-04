@@ -29,3 +29,7 @@ Route::get('admin', function(){ return view('admin.home'); });
 
 Route::post('BandingProses', 'BandingkanController@banding');
 
+// Authentication routes...
+Route::get('auth/login', 'Auth\AuthController@getLogin');
+Route::post('auth/login', 'Auth\AuthController@postLogin');
+Route::get('auth/logout', 'Auth\AuthController@getLogout');
