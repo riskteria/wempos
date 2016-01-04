@@ -69,9 +69,6 @@ class AuthController extends Controller
     {
         // Fungsi ini akan dipanggil setelah user berhasil login.
         // Kita bisa menambahkan aksi-aksi lainnya, misalnya mencatat waktu last_login user.
-        if($user->role == 'admin')
-            return redirect('admin');
-        else
-            return redirect('dashboard/'.$user->role);
+        return redirect('dashboard/'.$user->role);
     }
 }
