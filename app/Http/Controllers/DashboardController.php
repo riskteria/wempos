@@ -100,70 +100,30 @@ class DashboardController extends Controller
 
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-
-    public function create()
+    public function delete($tipe, $id)
     {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
+        if($tipe == 'event')
+        {
+            Events::where('id',$id)->delete();
+            return $this->adminview('events');
+        }
         
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+        elseif($tipe == 'article')
+        {
+            Articles::where('id',$id)->delete();
+            return $this->adminview('articles');
+        }
+        
+        elseif($tipe == 'user')
+        {
+            Users::where('id',$id)->delete();
+            return $this->adminview('users');
+        }
+        
+        elseif($tipe == 'activity')
+        {
+            Articles::where('id',$id)->delete();
+            return $this->adminview('activities');
+        }
     }
 }

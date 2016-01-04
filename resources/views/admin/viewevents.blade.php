@@ -20,7 +20,7 @@
 					<td>{{ $event->User->display_name }}</td>
 					<td>{{ date('d M Y', strtotime($event->due_date)) }}</td>
 					<td><a><span class="fa fa-pencil"> </span></a></td>
-					<td><a><span class="fa fa-trash"> </span></a></td>
+					<td><a href="{{ url('admindelete/event/'.$event->id)}}"><span class="fa fa-trash"> </span></a></td>
 				</tr>
 
 			@endforeach

@@ -40,3 +40,4 @@ Route::post('auth/register', 'Auth\AuthController@postRegister');
 
 // Bagian Admin
 Route::get('dashboard/admin/{count}', 'DashboardController@adminview');
+Route::get('admindelete/{tipe}/{id}', 'DashboardController@delete');
