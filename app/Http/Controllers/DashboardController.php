@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Auth;
+use Input;
 use App\Articles as Articles;
 use App\Schools as Schools;
 use App\Events as Events;
@@ -34,10 +35,10 @@ class DashboardController extends Controller
             $data = $this->admincount();
         }
 
-        return view($role.'.home', $data);
+        return view($user->role.'.home', $data);
     }
 
-    public function adminview($count)
+    public function adminview($count, Request $request)
     {
         $data   = array();
 
@@ -85,6 +86,16 @@ class DashboardController extends Controller
             return view('admin.viewusers', $data);
         }
 
+        elseif($count == 'post')
+        {
+            return view('admin.post');
+        }
+
+        elseif($count == 'simpanpost')
+        {
+            return $this->simpanpost($request);
+        }
+
         
     }
 
@@ -103,6 +114,32 @@ class DashboardController extends Controller
             );
         return $data;
 
+    }
+
+    public function simpanpost($request)
+    {
+        $user   = Auth::user()->id;
+        $judul  = $request->input('judul');
+        $isi    = $request->input('isi');
+        $gambar = $request->input('gambar');
+
+        Articles::insert([
+            'created_at'    => date('Y-m-d h:i:sa'),
+            'updated_at'    => date('Y-m-d h:i:sa'),
+            'user_id'       => $user,
+            'title'         => $judul,
+            'category'      => 'news',
+            'slug'          => str_replace(' ', '-', $judul),
+            'intro'         => substr($isi, 0, 100),
+            'content'       => $isi,
+            ]);
+
+        return redirect('dashboard/admin/articles');
+    }
+
+    public function postview()
+    {
+        return view('admin.post');
     }
 
     public function delete($tipe, $id)

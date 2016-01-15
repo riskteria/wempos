@@ -39,9 +39,6 @@
 							<li class="@if(Request::is('event')) {{ 'active' }} @endif">
 								<a href="{{ url('event') }}"><span class="topbar-icon"><i class="fa fa-calendar-o"></i></span>Event</a>
 							</li>
-							<li class="@if(Request::is('rekomendasi')) {{ 'active' }} @endif">
-								<a href="{{ url('rekomendasi') }}"><span class="topbar-icon"><i class="fa fa-star"></i></span>Rekomendasi</a>
-							</li>
 						</ul>
 
 						<ul class="right">

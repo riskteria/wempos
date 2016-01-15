@@ -8,7 +8,7 @@
 
 
 			<li {{ (Request::is('/') ? 'class="active"' : '') }}>
-	            <a href="{{ url ('dashboard/'.Auth::user()->role.'/Information') }}"><i class="fa fa-dashboard fa-fw"></i> Information</a>
+	            <a href="{{ url ('dashboard/'.Auth::user()->role.'/Information') }}"><i class="fa fa-table fa-fw"></i> Information</a>
 	        </li>
 
 	    </ul>
