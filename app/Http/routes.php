@@ -54,3 +54,8 @@ Route::get('dashboard/admin/{count}/{id}', 'DashboardController@adminview');
 Route::post('dashboard/admin/{count}/{id}', 'DashboardController@adminview');
 
 Route::get('admindelete/{tipe}/{id}', 'DashboardController@delete');
+
+Route::get('dashboard/organisasi', 'OrganisasiController@index');
+
+Route::get('dashboard/organisasi/{parameter}', 'OrganisasiController@parameter');
+Route::post('dashboard/organisasi/{parameter}', 'OrganisasiController@parameter');
