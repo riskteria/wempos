@@ -20,10 +20,10 @@
 					<textarea name="isi" cols="30" rows="10" class="form-control" required name="isi"></textarea>
 				</div>
 
-        <div class="form-group">
-            <label>Gambar Artikel</label>
-            <input type="file" required name="gambar">
-        </div>
+		        <div class="form-group">
+		            <label>Gambar Artikel</label>
+		            <input type="file" required name="gambar">
+		        </div>
 
 				<button class="btn btn-default pull-right" type="submit">Post</button>
 

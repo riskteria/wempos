@@ -16,6 +16,7 @@
 		<link rel="stylesheet" href="{{ asset('css/style.css') }}">
 		<link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
 		<link rel="stylesheet" href="{{ asset('icon/font-awesome.css') }}">
+		<link rel="stylesheet" href="{{ asset('css/datepicker.css') }}">
 		<link rel="icon"       href="{{ asset('img/wempos-logo.png') }}">
 
 	</head>
@@ -31,9 +32,7 @@
 
 			<div id="page-wrapper">
 				<div class="row">
-          <div class="col-lg-12">
-            <h1 class="page-header mdc-text-grey">@yield('page_heading')</h1>
-          </div>
+          <h1 class="page-header mdc-text-grey">@yield('page_heading')</h1>
           <!-- /.col-lg-12 -->
 	      </div>
 				<div class="row">  
@@ -52,5 +51,7 @@
     <script src="{{ asset('js/vendor/slideUp.js') }}"></script>
     <script src="{{ asset('js/main.js') }}"></script>
     <script src="{{ asset('js/frontend.js') }}"></script>
+    <script src="{{ asset('js/bootstrap-datepicker.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
 	</body>
 </html>

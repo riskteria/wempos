@@ -30,17 +30,25 @@ class OrganisasiController extends Controller
     public function parameter($parameter, Request $request = null, $id = null)
     {
         switch ($parameter) {
-            case '/':
-                return view('organisasi.home');
+            case 'post':
+                return view('organisasi.post');
                 break;
 
-            case 'value':
-                
+            case 'deleteevent':
+                return $this->deleteevent($id);
                 break;
             
             default:
                 return view('errors.404');
                 break;
         }
+    }
+
+    public function deleteevent($id)
+    {
+        Events::where('id', $id)->delete();
+        $upload_folder = '/img/event/';
+        unlink(public_path().$upload_folder.$id.'.jpg');
+        return redirect('dashboard/organisasi');
     }
 }
