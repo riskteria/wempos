@@ -20,7 +20,7 @@
                     <td>{{ $article->User->display_name }}</td>
                     <td>{{ date('d M Y', strtotime($article->updated_at)) }}</td>
                     <td><a><span class="fa fa-pencil"> </span></a></td>
-                    <td><a href="{{ url('admindelete/article/'.$article->id)}}"><span class="fa fa-trash"> </span></a></td>
+                    <td><a href="{{ url('dashboard/sekolah/deletepost/'.$article->id)}}"><span class="fa fa-trash"> </span></a></td>
                 </tr>
 
             @endforeach

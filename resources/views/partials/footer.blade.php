@@ -32,7 +32,7 @@
 </footer>
 <section class="full-width copyright-section">
     <div class="row">
-        <p>&copy; Website Media Promosi Untuk Sekoah 2014</p>
+        <p>&copy; Website Media Promosi Untuk Sekolah 2016</p>
     </div>
     
 </section>

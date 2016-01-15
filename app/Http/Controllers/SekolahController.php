@@ -38,7 +38,44 @@ class SekolahController extends Controller
         $user = Auth::user();
     }
 
-    public function simpaninfo(Request $request)
+    public function parameter($parameter, Request $request = null, $id = null)
+    {
+        if($parameter == 'Information')
+        {
+            return $this->information();
+        }
+
+        elseif($parameter == 'simpaninfo')
+        {
+            return $this->simpaninfo($request);
+        }
+
+        elseif($parameter == 'post')
+        {
+            return view('sekolah.post');
+        }
+
+        elseif($parameter == 'simpanpost')
+        {
+            return $this->simpanpost($request);
+        }
+
+        elseif($parameter == 'deletepost')
+        {
+            return $this->deletepost($id);
+        }
+    }
+
+    public function deletepost($id)
+    {
+        Articles::where('id',$id)->delete();
+        $upload_folder = '/img/article/';
+        unlink(public_path().$upload_folder.$id.'.jpg');
+
+        return redirect('dashboard/sekolah');
+    }
+
+    public function simpaninfo($request)
     {
         $user = Auth::user();
         $nama       = $request->input('nama_sekolah');
@@ -70,6 +107,31 @@ class SekolahController extends Controller
 
 
         return $this->information();
+    }
+
+    public function simpanpost($request)
+    {
+        $user   = Auth::user()->id;
+        $judul  = $request->input('judul');
+        $isi    = $request->input('isi');
+        $gambar = $request->file('gambar');
+
+        Articles::insert([
+            'created_at'    => date('Y-m-d h:i:sa'),
+            'updated_at'    => date('Y-m-d h:i:sa'),
+            'user_id'       => $user,
+            'title'         => $judul,
+            'category'      => 'activity',
+            'slug'          => str_replace(' ', '-', $judul),
+            'intro'         => substr($isi, 0, 300),
+            'content'       => $isi,
+            ]);
+
+        $filename = Articles::where('slug', str_replace(' ', '-', $judul))->first()->id;
+        $upload_folder = '/img/article/';
+        $gambar->move(public_path().$upload_folder, $filename.'.jpg');
+
+        return redirect('dashboard/sekolah');
     }
 
     public function information()

@@ -4,11 +4,11 @@
 @section('page_heading','Post Artikel Baru')
 
 @section('section')
-	
+
 	<div class="col-sm-12">
 		<div class="row">
 
-			{!! Form::open(array('url' => 'dashboard/admin/simpanpost', 'files' => true)) !!}
+			{!! Form::open(array('url' => 'dashboard/sekolah/simpanpost', 'files' => true)) !!}
 
 				<div class="form-group">
 					<label>Judul</label>

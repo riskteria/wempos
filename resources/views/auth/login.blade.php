@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title') Bandingkan Sekolah @endsection
+@section('title') Login Untuk Masuk @endsection
 
 @section('content')
 
@@ -18,14 +18,9 @@
                         <input name="password" type="password" required><span class="highlight"></span><span class="bar"></span>
                         <label class="loginbox-label">Password</label>
                     </div>
-                    <div class="checkbox checkbox-default">
-                        <input name="remember" id="remember" type="checkbox" value="yes" alt="Remember me" class="radius">
-                        <label for="remember">Remember me</label>
-                    </div>
                     <button type="submit" class="loginbox-button button">Masuk
                         <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
                     </button>
-                    <a href="" class="pass-forgot">Forgot your password?</a>
                 {!! Form::close() !!}
             </div>
 

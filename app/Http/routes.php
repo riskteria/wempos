@@ -28,8 +28,12 @@ Route::get('syarat','FooterController@syarat');
 Route::get('dashboard/admin', 'DashboardController@index');
 
 Route::get('dashboard/sekolah', 'SekolahController@index');
-Route::get('dashboard/sekolah/Information', 'SekolahController@information');
-Route::post('dashboard/sekolah/simpaninfo', 'SekolahController@simpaninfo');
+
+Route::get('dashboard/sekolah/{parameter}', 'SekolahController@parameter');
+Route::post('dashboard/sekolah/{parameter}', 'SekolahController@parameter');
+
+Route::get('dashboard/sekolah/{parameter}/{id}', 'SekolahController@parameter');
+Route::post('dashboard/sekolah/{parameter}/{id}', 'SekolahController@parameter');
 
 Route::post('BandingProses', 'BandingkanController@banding');
 
