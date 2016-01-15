@@ -64,6 +64,45 @@ class SekolahController extends Controller
         {
             return $this->deletepost($id);
         }
+
+        elseif($parameter == 'editpost')
+        {
+            $post = Articles::where('id', $id)->first();
+            $data = array(
+                    'post'  => $post,
+                );
+            return view('sekolah.editpost', $data);
+        }
+
+        elseif($parameter == 'simpanedit')
+        {
+            return $this->simpanedit($request, $id);
+        }
+    }
+
+    public function simpanedit($request, $id)
+    {
+        $user   = Auth::user()->id;   
+        $judul  = $request->input('judul');
+        $isi    = $request->input('isi');
+        $gambar = $request->file('gambar');
+        
+        Articles::where('id', $id)->update([
+                'title'      => $judul,
+                'content'    => $isi,
+                'updated_at' => date('Y-m-d h:i:sa'),
+                'slug'       => str_replace(' ', '-', $judul),
+                'intro'      => substr($isi, 0, 300),
+            ]); 
+
+        if($gambar !== null)
+        {
+            $filename = $id;
+            $upload_folder = '/img/article/';
+            $gambar->move(public_path().$upload_folder, $filename.'.jpg');
+        }
+
+        return redirect('dashboard/sekolah');
     }
 
     public function deletepost($id)
