@@ -8,11 +8,11 @@
 	<div class="col-sm-12">
 		<div class="row">
 
-			{!! Form::open(array('url' => 'dashboard/organisasi/simpanpost', 'files' => true)) !!}
+			{!! Form::open(array('url' => 'dashboard/organisasi/simpanedit/'.$event->id, 'files' => true)) !!}
 
 				<div class="form-group">
 					<label>Judul</label>
-					<input type="text" class="form-control" required name="judul">
+					<input type="text" class="form-control" required name="judul" value="{{$event->title}}">
 				</div>
 
 				<div class="form-group">
@@ -51,17 +51,21 @@
 
 				<div class="form-group">
 					<label>Lokasi</label>
-					<input type="text" name="lokasi" required class="form-control">
+					<input type="text" name="lokasi" required class="form-control" value="{{$event->location}}">
 				</div>
 
 				<div class="form-group">
 					<label>Isi</label>
-					<textarea name="isi" cols="30" rows="10" class="form-control" required name="isi"></textarea>
+					<textarea name="isi" cols="30" rows="10" class="form-control" required name="isi">{{$event->description}}</textarea>
 				</div>
+				
 
-		        <div class="form-group">
-		            <label>Gambar Artikel</label>
-		            <input type="file" required name="gambar">
+		        <div class="form-group col-sm-12">
+		        	<div class="col-sm-6">
+		        		<img src="{{ asset('img/event/'.$event->id.'.jpg') }}" alt="" style="width:100%">
+	        		</div>
+		            <label>Ganti Banner</label>
+		            <input type="file" name="gambar">
 		        </div>
 
 				<button class="btn btn-default pull-right" type="submit">Post</button>

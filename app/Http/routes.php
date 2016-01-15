@@ -59,3 +59,6 @@ Route::get('dashboard/organisasi', 'OrganisasiController@index');
 
 Route::get('dashboard/organisasi/{parameter}', 'OrganisasiController@parameter');
 Route::post('dashboard/organisasi/{parameter}', 'OrganisasiController@parameter');
+
+Route::get('dashboard/organisasi/{parameter}/{id}', 'OrganisasiController@parameter');
+Route::post('dashboard/organisasi/{parameter}/{id}', 'OrganisasiController@parameter');
