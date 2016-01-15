@@ -38,14 +38,14 @@ class DashboardController extends Controller
         return view($user->role.'.home', $data);
     }
 
-    public function adminview($count, Request $request)
+    public function adminview($count, Request $request = null, $id = null)
     {
         $data   = array();
 
         if($count == 'articles')
         {
 
-            $articles = Articles::all();
+            $articles = Articles::all()->where('category', 'news');
             $data       = array(
                         'articles'   => $articles,
                 );
@@ -56,7 +56,7 @@ class DashboardController extends Controller
         elseif($count == 'activities')
         {
 
-            $activities = Articles::all();
+            $activities = Articles::all()->where('category', 'activity');
             $data       = array(
                         'activities'   => $activities,
                 );
@@ -96,6 +96,15 @@ class DashboardController extends Controller
             return $this->simpanpost($request);
         }
 
+        elseif($count == 'editpost')
+        {
+            $post = Articles::where('id', $id)->first();
+            $data = array(
+                    'post'  => $post,
+                );
+            return view('admin.editpost', $data);
+        }
+
         
     }
 
@@ -121,7 +130,7 @@ class DashboardController extends Controller
         $user   = Auth::user()->id;
         $judul  = $request->input('judul');
         $isi    = $request->input('isi');
-        $gambar = $request->input('gambar');
+        $gambar = $request->file('gambar');
 
         Articles::insert([
             'created_at'    => date('Y-m-d h:i:sa'),
@@ -133,6 +142,10 @@ class DashboardController extends Controller
             'intro'         => substr($isi, 0, 100),
             'content'       => $isi,
             ]);
+
+        $filename = Articles::where('slug', str_replace(' ', '-', $judul))->first()->id;
+        $upload_folder = '/img/article/';
+        $gambar->move(public_path().$upload_folder, $filename.'.jpg');
 
         return redirect('dashboard/admin/articles');
     }
@@ -147,25 +160,27 @@ class DashboardController extends Controller
         if($tipe == 'event')
         {
             Events::where('id',$id)->delete();
-            return $this->adminview('events');
+            return redirect('dashboard/admin/events');
         }
         
         elseif($tipe == 'article')
         {
             Articles::where('id',$id)->delete();
-            return $this->adminview('articles');
+            $upload_folder = '/img/article/';
+            unlink(public_path().$upload_folder.$id.'.jpg');
+            return redirect('dashboard/admin/articles');
         }
         
         elseif($tipe == 'user')
         {
             Users::where('id',$id)->delete();
-            return $this->adminview('users');
+            return redirect('dashboard/admin/users');
         }
         
         elseif($tipe == 'activity')
         {
             Articles::where('id',$id)->delete();
-            return $this->adminview('activities');
+            return redirect('dashboard/admin/activities');
         }
     }
 }

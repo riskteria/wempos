@@ -1,23 +1,23 @@
 @extends('layouts.dashboard')
 
-@section('title','Post Artikel Baru')
-@section('page_heading','Post Artikel  Baru')
+@section('title','Edit This Post')
+@section('page_heading','Edit this post')
 
 @section('section')
 	
 	<div class="col-sm-12">
 		<div class="row">
 
-			{!! Form::open(array('url' => 'dashboard/admin/simpanpost', 'files' => true)) !!}
+			{!! Form::open(array('url' => 'dashboard/admin/editpost/{{$post->id}}', 'files' => true)) !!}
 
 				<div class="form-group">
 					<label>Judul</label>
-					<input type="text" class="form-control" required name="judul">
+					<input type="text" class="form-control" required name="judul" value="{{$post->title}}">
 				</div>
 
 				<div class="form-group">
 					<label>Isi</label>
-					<textarea name="isi" cols="30" rows="10" class="form-control" required name="isi"></textarea>
+					<textarea name="isi" cols="30" rows="10" class="form-control" required name="isi">{{$post->content}}</textarea>
 				</div>
 
         <div class="form-group">

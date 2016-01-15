@@ -1,7 +1,7 @@
 @extends('layouts.dashboard')
 
 @section('title','Welcome to Dashboard')
-@section('page_heading','activitys')
+@section('page_heading','Activities')
 
 @section('section')
 
