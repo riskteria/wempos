@@ -6,8 +6,19 @@
 @section('section')
 
 	<div class="col-sm-12">
-        {!! Form::open(array('url'=>'dashboard/sekolah/simpaninfo')) !!}
+        {!! Form::open(array('url'=>'dashboard/sekolah/simpaninfo', 'files' => true)) !!}
 		<div class="row">
+
+			<div class="col-lg-6">
+				<img src="{{ asset('img/sekolah/'.Auth::user()->id.'.jpg') }}" alt="" style="width:100%">
+				
+				<div class="col-lg-12 row">
+					<div class="form-group">
+						<label>Ganti Gambar</label>
+	            		<input type="file" name="gambar">
+					</div>
+				</div>
+			</div>
 
 			<div class="col-lg-6">
 	            <div class="form-group">

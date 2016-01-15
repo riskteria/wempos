@@ -89,6 +89,7 @@ class SekolahController extends Controller
         $prestasi   = $request->input('prestasi');
         $biaya      = $request->input('biaya');
         $kegiatan   = $request->input('kegiatan');
+        $gambar     = $request->file('gambar');
 
         Schools::where('user_id', $user->id)->update([
                 'nama_sekolah' => $nama,
@@ -104,6 +105,14 @@ class SekolahController extends Controller
                 'kegiatan'  => $kegiatan,
                 'updated_at'    => date('Y-m-d h:i:sa'),
             ]);
+
+        if($gambar !== null)
+        {
+            $upload_folder = '/img/sekolah/';
+            unlink(public_path().$upload_folder.$user->id.'.jpg');
+            $gambar->move(public_path().$upload_folder, $user->id.'.jpg');
+        }
+
 
 
         return $this->information();
