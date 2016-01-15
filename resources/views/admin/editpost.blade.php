@@ -8,7 +8,7 @@
 	<div class="col-sm-12">
 		<div class="row">
 
-			{!! Form::open(array('url' => 'dashboard/admin/editpost/{{$post->id}}', 'files' => true)) !!}
+			{!! Form::open(array('url' => 'dashboard/admin/simpanedit/'.$post->id, 'files' => true)) !!}
 
 				<div class="form-group">
 					<label>Judul</label>
@@ -22,7 +22,7 @@
 
         <div class="form-group">
             <label>Gambar Artikel</label>
-            <input type="file" required name="gambar">
+            <input type="file" name="gambar">
         </div>
 
 				<button class="btn btn-default pull-right" type="submit">Post</button>

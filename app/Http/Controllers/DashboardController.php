@@ -105,6 +105,11 @@ class DashboardController extends Controller
             return view('admin.editpost', $data);
         }
 
+        elseif($count == 'simpanedit')
+        {
+            return $this->simpanedit($request, $id);
+        }
+
         
     }
 
@@ -139,7 +144,7 @@ class DashboardController extends Controller
             'title'         => $judul,
             'category'      => 'news',
             'slug'          => str_replace(' ', '-', $judul),
-            'intro'         => substr($isi, 0, 100),
+            'intro'         => substr($isi, 0, 300),
             'content'       => $isi,
             ]);
 
@@ -148,6 +153,31 @@ class DashboardController extends Controller
         $gambar->move(public_path().$upload_folder, $filename.'.jpg');
 
         return redirect('dashboard/admin/articles');
+    }
+
+    public function simpanedit($request, $id)
+    {
+        $user   = Auth::user()->id;   
+        $judul  = $request->input('judul');
+        $isi    = $request->input('isi');
+        $gambar = $request->file('gambar');
+        
+        Articles::where('id', $id)->update([
+                'title'      => $judul,
+                'content'    => $isi,
+                'updated_at' => date('Y-m-d h:i:sa'),
+                'slug'       => str_replace(' ', '-', $judul),
+                'intro'      => substr($isi, 0, 300),
+            ]); 
+
+        if($gambar !== null)
+        {
+            $filename = $id;
+            $upload_folder = '/img/article/';
+            $gambar->move(public_path().$upload_folder, $filename.'.jpg');
+        }
+
+        return redirect('dashboard/admin/articles');   
     }
 
     public function postview()
