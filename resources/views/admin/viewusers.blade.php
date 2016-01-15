@@ -21,7 +21,6 @@
 					<td>{{ $user->email }}</td>
 					<td>{{ $user->role }}</td>
 					<td>{{ date('d M Y', strtotime($user->updated_at)) }}</td>
-					<td><a><span class="fa fa-pencil"> </span></a></td>
 					<td><a href="{{ url('admindelete/user/'.$user->id)}}"><span class="fa fa-trash"> </span></a></td>
 				</tr>
 
