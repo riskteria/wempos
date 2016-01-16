@@ -21,9 +21,9 @@
       <div class="small-12 medium-4 large-4 columns">
           
           <h5>Temukan Kami</h5>
-          <a href="http://instagram.com"><i class="fi-social-instagram size-48 mdc-text-black-dark"></i></a>
-          <a href="http://facebook.com"><i class="fi-social-facebook size-48 mdc-text-black-dark"></i></a>
-          <a href="http://twitter.com"><i class="fi-social-twitter size-48 mdc-text-black-dark"></i></a>
+          <a href="https://instagram.com/wempos123"><i class="fi-social-instagram size-48 mdc-text-black-dark"></i></a>
+          <a href="https://www.facebook.com/Wempos-193923787628836/?skip_nax_wizard=true"><i class="fi-social-facebook size-48 mdc-text-black-dark"></i></a>
+          <a href="https://twitter.com/wempos123"><i class="fi-social-twitter size-48 mdc-text-black-dark"></i></a>
        
 
       </div>
