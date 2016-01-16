@@ -10,18 +10,19 @@
 
             <div class="row">
                 <div class="large-12 columns">
-                    <h3 class="center">Syarat dan Ketentuan</h3>
+                    <h3 class="center">Kebijakan Privasi</h3>
                     <hr>
                 </div>
             </div>
 
             <div class="row">
-                <p>Selamat datang di website www.wempos.com. Berikut adalah syarat dan ketentuan dalam menggunakan wempos . Dengan menggunakan pelayanan kami, berarti Anda setuju dengan syarat dan ketentuan berikut : </p>
+               
+              <p>Tanggal berlaku: 1 Januari 2016</p>
+                <p>Selamat datang di Wempos. Wsmpos menyediakan cara cepat, indah dan menyenangkan untuk berbagi informasi tentang sekolah. Cukup daftar sekolah, kemudian promosikan sekolah anda.</p>
                 <ul>
-                    <li>1. Anda wajib memberikan nama lengkap dan jelas, alamat, alamat email yang valid dan informasi lain yang dibutuhkan dalam pendaftaran layanan Wempos.</li>
-                    <li>2. Anda berkewajiban untuk menjaga kemanan password Anda, Wempos tidak akan bertanggung jawab pada kerugian dan kerusakan yang timbul akibat ketidak mampuan Anda dalam menjaga keamanan password Anda.</li>
-                    <li>3. Anda tidak diijinkan menggunakan Wempos untuk aktifitas ilegal dan melanggar hukum/undang-undang.</li>
-                    <li>4. Anda bertanggung jawab atas semua aktivitas dan konten (data, text, foto, gambar, link) yang Anda unggah melalui akun Anda di Wempos.</li>
+                    <li>1. Kebijakan Privasi kami menjelaskan bagaimana kami dan beberapa perusahaan yang bekerja sama dengan kami mengumpulkan, menggunakan, membagi dan melindungi informasi yang berhubungan dengan layanan situs web.</li>
+                    <li>2. Dengan menggunakan Layanan kami Anda memahami dan menyetujui bahwa kami menyediakan platform untuk Anda mengirim konten, termasuk foto, komentar dan materi lainnya ("Konten Pengguna"), ke Layanan dan untuk berbagi Konten Pengguna secara publik. Ini berarti Pengguna lain mungkin mencari, melihat, menggunakan, atau berbagi semua Konten Pengguna yang Anda bagikan kepada publik melalui Layanan, sejalan dengan syarat dan ketentuan Kebijakan Privasi dan Ketentuan Penggunaan.</li>
+                    <li>3. Kebijakan kami berlaku untuk semua pengunjung, pengguna, dan semua orang yang mengakses Layanan ("Pengguna").</li>
                 </ul>
 
 
