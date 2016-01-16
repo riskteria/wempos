@@ -62,3 +62,6 @@ Route::post('dashboard/organisasi/{parameter}', 'OrganisasiController@parameter'
 
 Route::get('dashboard/organisasi/{parameter}/{id}', 'OrganisasiController@parameter');
 Route::post('dashboard/organisasi/{parameter}/{id}', 'OrganisasiController@parameter');
+
+Route::get('daftar/{usertype}', 'DaftarController@parameter');
+Route::post('daftar/{usertype}', 'DaftarController@parameter');
