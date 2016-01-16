@@ -11,7 +11,7 @@
 				<!-- card image -->
 
 				<div class="reveal-card-content clearfix">
-					<span class="reveal-card-title left"><a class="mdc-text-white-dark" href="daftar/sekolah.html">Sekolah</a></span>
+					<span class="reveal-card-title left"><a class="mdc-text-white-dark" href="daftar/sekolah">Sekolah</a></span>
 					<a class="btn btn-custom right mdc-text-white-dark show-card-detail" aria-label="Left Align">
 						<i class="fa fa-ellipsis-v"> </i>
 					</a>
@@ -37,7 +37,7 @@
 				<!-- card image -->
 
 				<div class="reveal-card-content clearfix">
-					<span class="reveal-card-title left"><a class="mdc-text-white-dark" href="daftar/organisasi.html">Organisasi</a></span>
+					<span class="reveal-card-title left"><a class="mdc-text-white-dark" href="daftar/organisasi">Organisasi</a></span>
 					<a class="btn btn-custom right mdc-text-white-dark show-card-detail" aria-label="Left Align">
 						<i class="fa fa-ellipsis-v"> </i>
 					</a>
@@ -63,7 +63,7 @@
 				<!-- card image -->
 
 				<div class="reveal-card-content clearfix">
-					<span class="reveal-card-title left"><a class="mdc-text-white-dark" href="daftar/pribadi.html">Pribadi</a></span>
+					<span class="reveal-card-title left"><a class="mdc-text-white-dark" href="daftar/pribadi">Pribadi</a></span>
 					<a class="btn btn-custom right mdc-text-white-dark show-card-detail" aria-label="Left Align">
 						<i class="fa fa-ellipsis-v"> </i>
 					</a>
