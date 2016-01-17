@@ -183,7 +183,7 @@
             	@endif
             </td>
 
-            <th>Fasilitas</th>
+            <th>Kegiatan</th>
             
             <td>
             	@if(isset($sekolah2))
