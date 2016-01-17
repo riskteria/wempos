@@ -19,10 +19,10 @@
 							<li style="height:auto" class="center">
 								<h5>Buat akun anda, GRATIS !</h5></li>
 							<li style="height:auto;" class="center">
-								<a href="daftar/sekolah.html" class="button mdc-bg-blue-grey" style="width:80%">Sekolah</a>
+								<a href="daftar/sekolah" class="button mdc-bg-blue-grey" style="width:80%">Sekolah</a>
 							</li>
 							<li style="height:auto" class="center">
-								<a href="daftar/organisasi.html" class="button mdc-bg-red-pink" style="width:80%">Organisasi</a>
+								<a href="daftar/organisasi" class="button mdc-bg-red-pink" style="width:80%">Organisasi</a>
 							</li>
 						</ul>
 					</div>
