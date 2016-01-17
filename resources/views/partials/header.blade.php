@@ -24,9 +24,6 @@
 							<li style="height:auto" class="center">
 								<a href="daftar/organisasi.html" class="button mdc-bg-red-pink" style="width:80%">Organisasi</a>
 							</li>
-							<li style="height:auto" class="center">
-								<a href="daftar/pribadi.html" class="button mdc-bg-teal" style="width:80%">Pribadi</a>
-							</li>
 						</ul>
 					</div>
 
