@@ -108,7 +108,7 @@ class OrganisasiController extends Controller
         $isi      = $request->input('isi');
         $gambar   = $request->file('gambar');
 
-        $due_date = date('Y-m-d h:i:sa', mktime(11, 14, 54, $tanggal, $bulan, $tahun));
+        $due_date = date('Y-m-d h:i:sa', mktime(11, 14, 54, $bulan, $tanggal, $tahun));
 
         Events::insert([
                 'user_id'       => $user,
