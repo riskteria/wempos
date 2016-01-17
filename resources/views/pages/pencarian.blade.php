@@ -27,7 +27,7 @@
 		<div class="tabs-content">
 			<div class="large-12 content active" id="panel-1">
 					@forelse($schools as $school)
-						<h6 class="center"><a href="profil-sekolah.html">{{ $school->nama_sekolah }}</a></h6>
+						<h6 class="center"><a href="{{ url('profil/'.$school->id) }}">{{ $school->nama_sekolah }}</a></h6>
 					@empty
 						<h4 class="center mdc-text-grey">Pencarian tidak ada . . .</h4>
 					@endforelse
