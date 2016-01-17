@@ -64,12 +64,31 @@
                                             </select>
                                         </div>
                                     </div>
+                                    
                                     <div class="row collapse">
                                         <div class="small-2  columns">
                                             <span class="prefix"><i class="fi-marker"></i></span>
                                         </div>
                                         <div class="small-10  columns">
                                             <input type="text" placeholder="Alamat" name="alamat" required>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row collapse">
+                                        <div class="small-2  columns">
+                                            <span class="prefix"><i class="fi-marker"></i></span>
+                                        </div>
+                                        <div class="small-10  columns">
+                                            <input type="text" placeholder="Kota" name="kota" required>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row collapse">
+                                        <div class="small-2  columns">
+                                            <span class="prefix"><i class="fi-marker"></i></span>
+                                        </div>
+                                        <div class="small-10  columns">
+                                            <input type="text" placeholder="Provinsi" name="provinsi" required>
                                         </div>
                                     </div>
 

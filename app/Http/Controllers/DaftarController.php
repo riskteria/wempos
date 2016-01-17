@@ -81,6 +81,8 @@ class DaftarController extends Controller
         $nama        = $request->input('nama');
         $jenjang     = $request->input('jenjang');
         $alamat      = $request->input('alamat');
+        $kota        = $request->input('kota');
+        $provinsi    = $request->input('provinsi');
         $nomor_pokok = $request->input('nomor_pokok');
         $username    = $request->input('username');
         $email       = $request->input('email');
@@ -104,6 +106,8 @@ class DaftarController extends Controller
                 'nama_sekolah'  => $nama,
                 'jenjang'       => $jenjang,
                 'alamat'        => $alamat,
+                'kota'          => $kota,
+                'provinsi'      => $provinsi,
                 'nomor_pokok'   => $nomor_pokok,
                 'created_at'    => date('Y-m-d h:i:sa'),
                 'updated_at'    => date('Y-m-d h:i:sa'),
