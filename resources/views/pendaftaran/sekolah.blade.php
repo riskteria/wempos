@@ -39,7 +39,7 @@
                     <div class="row">
                         <div class="large-12 columns">
                             <div class="signup-panel">
-                                {!! Form::open(array('url' => 'daftar/simpansekolah')) !!}
+                                {!! Form::open(array('url' => 'daftar/simpansekolah', 'files' => true)) !!}
                                     <div class="row collapse">
                                         <div class="small-2  columns">
                                             <span class="prefix"><i class="fi-flag"></i></span>
