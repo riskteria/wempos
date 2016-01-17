@@ -203,7 +203,14 @@ class DashboardController extends Controller
         
         elseif($tipe == 'user')
         {
+            $role = Users::where('id',$id);
             Users::where('id',$id)->delete();
+
+            if($role-role == 'sekolah')
+            {
+                Schools::where('user_id', $role->id)->delete();
+            }
+            
             return redirect('dashboard/admin/users');
         }
         
