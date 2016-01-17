@@ -49,7 +49,6 @@
                     <li class="tab-title"><a href="#prestasi">Prestasi</a></li>
                     <li class="tab-title"><a href="#biaya">Biaya</a></li>
                     <li class="tab-title"><a href="#kegiatan">Kegiatan</a></li>
-                    <li class="tab-title"><a href="#bandingkan">Bandingkan</a></li>
                   </ul>
                 </div>
 
